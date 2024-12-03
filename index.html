@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recap Of Dom</title>
+    <link rel="stylesheet" href="./styles/color.css">
+    <style>
+        li {
+            color: rgb(230, 0, 255);
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Let's Start Our Dom Journey </h1>
+    </header>
+    <main>
+        <h2>Our Awesome Dom Features</h2>
+        <ul>
+            <li>Blue</li>
+            <li>Green</li>
+            <li>Yellow</li>
+        </ul>
+        <ul>
+            <li>Apple</li>
+            <li>Orange</li>
+            <li>Banana</li>
+        </ul>
+    </main>
+    <script src="./js/dom.js"></script>
+    <script>
+        const liCollection = document.getElementsByTagName('li');
+        // console.log(liCollection);
+        for (const li of liCollection) {
+            console.log(li.innerText);
+        }
+        const allHeading = document.getElementsByTagName('h1');
+        for (const h1 of allHeading) {
+            console.log(h1.innerText);
+        }
+    </script>
+</body>
+
+</html>
