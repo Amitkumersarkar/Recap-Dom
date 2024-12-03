@@ -10,36 +10,67 @@
         li {
             color: rgb(230, 0, 255);
         }
+
+        #fruits-title {
+            color: brown;
+        }
+
+        .important-places {
+            color: darkcyan;
+        }
     </style>
 </head>
 
 <body>
     <header>
         <h1>Let's Start Our Dom Journey </h1>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium libero, adipisci necessitatibus
+            dignissimos nemo a autem, harum amet nostrum atque maiores impedit doloribus, dolorum quaerat?</p>
     </header>
     <main>
-        <h2>Our Awesome Dom Features</h2>
-        <ul>
-            <li>Blue</li>
-            <li>Green</li>
-            <li>Yellow</li>
-        </ul>
-        <ul>
-            <li>Apple</li>
-            <li>Orange</li>
-            <li>Banana</li>
-        </ul>
+        <section>
+            <h2>Our Awesome Dom Features</h2>
+            <ul>
+                <li>Blue</li>
+                <li>Green</li>
+                <li>Yellow</li>
+            </ul>
+        </section>
+        <section>
+            <h1 id="fruits-title">Fruits I Like</h1>
+            <ul>
+                <li>Apple</li>
+                <li>Orange</li>
+                <li>Banana</li>
+            </ul>
+        </section>
+        <section>
+            <h1 id="places-name">Places I Like To Visit</h1>
+            <ul>
+                <li class="important-places">Russia</li>
+                <li class="important-places">Japan</li>
+                <li class="important-places">Europe</li>
+                <li>Thailand</li>
+            </ul>
+        </section>
     </main>
     <script src="./js/dom.js"></script>
     <script>
+        const fruitsTitle = document.getElementById('fruits-title');
+        fruitsTitle.innerText = 'favorite Fruits';
+
         const liCollection = document.getElementsByTagName('li');
         // console.log(liCollection);
         for (const li of liCollection) {
-            console.log(li.innerText);
+            /* console.log(li.innerText); */
         }
         const allHeading = document.getElementsByTagName('h1');
         for (const h1 of allHeading) {
-            console.log(h1.innerText);
+            /* console.log(h1.innerText); */
+        }
+        const places = document.getElementsByClassName('important-places');
+        for (const place of places) {
+            /* console.log(place.innerText); */
         }
     </script>
 </body>
