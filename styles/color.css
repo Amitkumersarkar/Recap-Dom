@@ -1,3 +1,12 @@
 h1 {
     color: blueviolet;
 }
+
+.text-center {
+    /* background-color: yellowgreen !important; */
+    text-align: center;
+}
+
+.large-text {
+    font-size: 2em;
+}
