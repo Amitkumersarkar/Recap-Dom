@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Bubble</title>
+</head>
+<style>
+    ul {
+        border: 2px solid violet;
+    }
+
+    body {
+        border: 2px solid red;
+    }
+
+    section {
+        border: 2px solid purple;
+    }
+
+    #item-2 {
+        border: 2px solid green;
+    }
+</style>
+
+<body>
+    <h1>Exploring Bubble</h1>
+    <section id="list-container">
+        <ul id="list-ul">
+            <!-- li#item-$*6>lorem2 -->
+            <li id="item-1">Lorem, ipsum.</li>
+            <li id="item-2">Ipsum, nostrum.</li>
+            <li id="item-3">Ipsam, recusandae!</li>
+            <li id="item-4">Quasi, repellendus.</li>
+            <li id="item-5">Ut, repellat.</li>
+            <li id="item-6">Rem, temporibus.</li>
+        </ul>
+    </section>
+    <script>
+        // we can use multiple click handler
+        document.getElementById('item-2').addEventListener('click', function (event) {
+            console.log('item-2 clicked');
+            event.stopImmediatePropagation();
+        });
+        document.getElementById('item-2').addEventListener('click', function (event) {
+            console.log('item-2 clicked');
+            event.stopPropagation();
+        });
+        document.getElementById('list-ul').addEventListener('click', function (event) {
+            console.log('ul clicked');
+            event.stopPropagation();
+        });
+        document.getElementById('list-container').addEventListener('click', function (event) {
+            console.log('section container clicked');
+            event.stopPropagation();
+        });
+    </script>
+</body>
+
+</html>
